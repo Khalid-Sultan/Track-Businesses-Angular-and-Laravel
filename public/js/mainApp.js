@@ -141,14 +141,23 @@ app.controller('enterpriseLevelController', ['$scope', '$http', 'toastr', 'AngSe
 }]);
 app.controller('enterpriseMemberController', ['$scope', '$http', 'toastr', 'AngService', function ($scope, $http, toastr, AngService) {
     $scope.allEnterpriseMembers = [];
+    $scope.allEnterprises = [];
+    $scope.allMemberLevels = [];
+    $scope.allMemberJobSites = [];
+    $scope.allMembershipByEZs = [];
+    $scope.allMemberJobTypes = [];
+
     var initializeEnterpriseMembers = function () {
-        AngService.getEnterpriseMember().success(function (data) {
-            $scope.allEnterpriseMembers = data;
-        });
+        AngService.getEnterpriseMember().success(function (data) {  $scope.allEnterpriseMembers = data; });
+        AngService.getEnterprise().success(function (data){     $scope.allEnterprises = data;   });
+        AngService.getMemberLevel().success(function (data){    $scope.allMemberLevels = data;  });
+        AngService.getMemberJobSite().success(function (data){    $scope.allMemberJobSites = data;  });
+        AngService.getMembershipByEZ().success(function (data){    $scope.allMembershipByEZs = data;  });
+        AngService.getMemberJobType().success(function (data){    $scope.allMemberJobTypes = data;  });
     };
     initializeEnterpriseMembers();
     $scope.addEnterpriseMembers = function () {
-        var identification = $scope.myIdentificationInput;
+        var enterprise = $scope.myEnterpriseInput;
         var name = $scope.myNameInput;
         var gender = $scope.myGenderInput;
         var age = $scope.myAgeInput;
@@ -173,13 +182,13 @@ app.controller('enterpriseMemberController', ['$scope', '$http', 'toastr', 'AngS
         var salary_amount = $scope.mySalaryAmountInput;
         var employement_period = $scope.myEmployementPeriodInput;
         var lasting_months = $scope.myLastingMonthsInput;
-        AngService.addEnterpriseMember(
-            identification, name, gender, age, member_levels, trained_career, member_job_sites, job_search, job_search_registered,
+        AngService.addEnterpriseMember(enterprise,
+            name, gender, age, member_levels, trained_career, member_job_sites, job_search, job_search_registered,
             awareness_training, professional_training, professional_evaluation, professional_eval_eligibility, disabled,
             persecuted, living_with_aids, displaced, happiness, membership_by_e_z_s, nation, phone_number, member_job_types,
             salary_amount, employement_period, lasting_months
         ).success(function (data) {
-            $scope.myIdentificationInput = "";
+            $scope.myEnterpriseInput = "";
             $scope.myNameInput = "";
             $scope.myGenderInput = "";
             $scope.myAgeInput = "";
@@ -208,7 +217,7 @@ app.controller('enterpriseMemberController', ['$scope', '$http', 'toastr', 'AngS
             initializeEnterpriseMembers();
             $scope.allEnterpriseMembers.push({
                 id: data.id,
-                identification: identification,
+                enterprise: enterprise,
                 name: name,
                 gender: gender,
                 age: age,
