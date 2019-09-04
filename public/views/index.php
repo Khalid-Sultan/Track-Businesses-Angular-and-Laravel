@@ -23,7 +23,7 @@
 	<link rel="stylesheet" type="text/css" href="../content/css/helpers.css">
 
 	<script type="text/javascript" src="../js/index.js"></script>
-	<script type="text/javascript" src="../js/services/todoService.js"></script>
+	<script type="text/javascript" src="../js/services/AngService.js"></script>
 	<script type="text/javascript" src="../js/mainRoutes.js"></script>
 	<script type="text/javascript" src="../js/mainApp.js"></script>
 
@@ -37,15 +37,32 @@
 	        <ul class="nav sidebar-nav">
 	            <li class="sidebar-brand">
 	                <a href="#/">
-	                   To-do app
+	                   Assossa System
 	                </a>
 	            </li>
-	            <li>
-	                <a href="#/">Your todo lists</a>
-	            </li>
-	            <li>
-	                <a href="#about">About</a>
-	            </li>
+                <li><a href="#enterpriseMember">Enterprise Member</a></li>
+                <li>Miscellaneous</li>
+                <li><a href="#addressScope">Address Scope</a></li>
+                <li><a href="#addressZone">Address Zone</a></li>
+                <li><a href="#capitalSource">Capital Source</a></li>
+                <li><a href="#enterpriseArchitectureSource">Enterprise Architecture Source</a></li>
+                <li><a href="#enterpriseLevel">Enterprise Level</a></li>
+                <li><a href="#enterpriseTypeByDefinition">Enterprise Type By Definition</a></li>
+                <li><a href="#institutionalReason">Institutional Reason</a></li>
+                <li><a href="#institutionalStatus">Institutional Status</a></li>
+                <li><a href="#mCCInstitution">Market Connection Creator Institution</a></li>
+                <li><a href="#mCCMarket">Market Connection Creator Market</a></li>
+                <li><a href="#marketConnectionType">Market Connection Type</a></li>
+                <li><a href="#memberJobSite">Member Job Site</a></li>
+                <li><a href="#memberJobType">Member Job Type</a></li>
+                <li><a href="#memberLevel">Member Level</a></li>
+                <li><a href="#membershipByEZ">Membership By EZ</a></li>
+                <li><a href="#operatingSector">Operating Sector</a></li>
+                <li><a href="#operatingSubSector">Operating Sub Sector</a></li>
+                <li><a href="#organization">Organization</a></li>
+                <li><a href="#organizationalType">Organizational Type</a></li>
+                <li><a href="#tEInstitution">Type Of Entrepreneurial Institution</a></li>
+	            <li><a href="#about">About</a></li>
 	        </ul>
 	    </nav>
 	    <!-- /#sidebar-wrapper -->
