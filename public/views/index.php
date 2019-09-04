@@ -41,7 +41,6 @@
 	                </a>
 	            </li>
                 <li><a href="#enterpriseMember">Enterprise Member</a></li>
-                <li>Miscellaneous</li>
                 <li><a href="#addressScope">Address Scope</a></li>
                 <li><a href="#addressZone">Address Zone</a></li>
                 <li><a href="#capitalSource">Capital Source</a></li>

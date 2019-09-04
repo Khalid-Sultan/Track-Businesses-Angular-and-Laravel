@@ -3,8 +3,8 @@ var app = angular.module('mainRoutes', ['ngRoute']);
 app.config(function ($routeProvider) {
     $routeProvider
     .when('/about', {
-        templateUrl: '../views/home/about.html'
-    })
+            templateUrl: '../views/home/about.html'
+        })
     .when('/', {
         controller: 'enterpriseController',
         templateUrl: '../views/enterprise.php'
@@ -73,7 +73,7 @@ app.config(function ($routeProvider) {
         controller: 'typeOfEntrepreneurialInstitutionController',
         templateUrl: '../views/typeOfEntrepreneurialInstitution.php'
     })
-        .otherwise({
-            redirectTo: '/'
-        });
+    .otherwise({
+        redirectTo: '/'
+    });
 });

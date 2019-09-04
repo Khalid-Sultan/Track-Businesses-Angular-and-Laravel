@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Enterprise extends Model
 {
-    protected $table = 'address_zones';
+    protected $table = 'enterprises';
     protected $fillable = [
         'identification',
         'EnterpriseName',
